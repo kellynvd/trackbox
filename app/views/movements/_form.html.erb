@@ -1,0 +1,16 @@
+<%= form_for @movement do |f|  %>
+  <% if @movement.errors.any? %>
+    <div>
+      Há erros no formulário, por favor verifique.
+    </div>
+  <% end %>
+  <div>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <%= error_tag(@movement, :name) %>
+  </div>
+
+  <div>
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,5 @@
+<%= @movement.name %>
+
+<%= button_to "All Movements", movements_path, method: :get %>
+<%= button_to "Edit Movement", edit_movement_path(@movement), method: :get %>
+<%= button_to 'Remove Movement', movement_path(@movement), method: 'delete', data: { confirm: 'Are you sure?' } %>
