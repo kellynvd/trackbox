@@ -1,4 +1,4 @@
-<h3>Edit a Movement</h3>
+<h3> <%= t '.title' %></h3>
 <%= render 'form', room: @movement %>
 
-<%= link_to 'Back', movement_path %>
+<%= button_to t('.back'), movement_path, method: :get %>

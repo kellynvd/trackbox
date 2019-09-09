@@ -1,9 +1,5 @@
 <%= form_for @movement do |f|  %>
-  <% if @movement.errors.any? %>
-    <div>
-      Há erros no formulário, por favor verifique.
-    </div>
-  <% end %>
+<%= form_error_tag (@movement) %>
   <div>
     <%= f.label :name %>
     <%= f.text_field :name %>

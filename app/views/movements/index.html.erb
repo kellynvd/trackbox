@@ -1,9 +1,10 @@
 <table>
+  <h1><%= t '.title' %> </h1>
   <% @movements.each do |movement| %>
     <tr>
       <td><%= link_to movement.name, movement_path(movement) %></td>
-      <td><%= button_to 'Edit', edit_movement_path(movement), method: 'get'%></td>
-      <td><%= button_to 'Remove', movement_path(movement), method: 'delete', data: { confirm: 'Are you sure?' } %></td>
+      <td><%= button_to t('.edit'), edit_movement_path(movement), method: :get%></td>
+      <td><%= button_to t('.destroy'), movement_path(movement), method: :delete, data: { confirm: t(:confirm_message) } %></td>
   <% end %>
 </table>
-<%= link_to "Add a New Movement", new_movement_path %>
+<%= button_to t('.new'), new_movement_path, method: :get%>

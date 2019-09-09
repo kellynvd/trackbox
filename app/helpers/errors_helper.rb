@@ -10,4 +10,14 @@ module ErrorsHelper
       class: 'error-message'
     )
   end
+
+  def form_error_tag(model)
+    return unless model.errors.any?
+
+    content_tag(
+      :div,
+      I18n.t(:form_error),
+      class: 'error-message'
+    )
+  end
 end
