@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+# frozen_string_literal: true.
+
 RSpec.describe Movement do
   describe 'validations' do
     subject { Movement.create(name: 'Snatch') }
