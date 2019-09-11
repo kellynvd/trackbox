@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-# frozen_string_literal: true.
-
 class MovementsController < ApplicationController
   before_action :current_movement, only: %i[show edit update destroy]
 
