@@ -1,7 +1,8 @@
 AllCops:
   TargetRubyVersion: 2.6
   Exclude:
-    - 'db/schema.rb'
+    - db/schema.rb
+    - vendor/bundle/**/*
 
 Style/Documentation:
   Enabled: false
