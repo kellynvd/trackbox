@@ -1,0 +1,10 @@
+<table>
+  <h1><%= t '.title' %> </h1>
+  <% @personal_records.each do |personal_record| %>
+    <tr>
+      <td><%= link_to personal_record.movement.name, personal_record_path(personal_record) %></td>
+      <td><%= link_to personal_record.weight, personal_record_path(personal_record) %></td>
+    </tr>
+  <% end %>
+</table>
+<%= button_to t('.new'), '/personal_records/movements', method: :get %>

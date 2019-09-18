@@ -12,17 +12,32 @@ pt-BR:
     edit:
       title: 'Editar Movimento'
       back: 'Voltar'
+  personal_records:
+    new:
+      back: 'Voltar'
+    index:
+      title: 'Recordes Pessoais'
+      new: 'Novo Recorde'
+    show:
+      title: 'Seus Recordes'
+      destroy: 'Remover'
+      new: 'Novo Recorde'
+      back: 'Voltar'
 
   form_error: 'Há erros no formulário, por favor verifique'
   confirm_message: 'Você tem certeza?'
-  
+
   activerecord:
     models:
       movement: Movimento
+      personal_record: Recorde Pessoal
     attributes:
+      personal_record:
+        date: Data
+        weight: Carga
       user:
         password: Senha
-    errors:
+      errors:
       messages:
         record_invalid: 'A validação falhou: %{errors}'
         restrict_dependent_destroy:
@@ -38,7 +53,7 @@ pt-BR:
     - sex
     - sáb
     abbr_month_names:
-    - 
+    -
     - jan
     - fev
     - mar
@@ -64,7 +79,7 @@ pt-BR:
       long: "%d de %B de %Y"
       short: "%d de %B"
     month_names:
-    - 
+    -
     - janeiro
     - fevereiro
     - março
