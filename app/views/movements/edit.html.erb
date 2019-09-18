@@ -1,0 +1,4 @@
+<h3> <%= t '.title' %></h3>
+<%= render 'form', room: @movement %>
+
+<%= button_to t('.back'), movement_path, method: :get %>

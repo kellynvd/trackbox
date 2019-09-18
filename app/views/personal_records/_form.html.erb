@@ -1,0 +1,17 @@
+<%= form_for @personal_record do |f|  %>
+<%= form_error_tag (@personal_record) %>
+  <%= f.text_field :movement_id, value: @personal_record.movement_id, hidden: true %>
+  <div>
+    <%= f.label :date %>
+    <%= f.date_field :date %>
+    <%= error_tag(@personal_record, :date) %>
+  </div>
+   <div>
+    <%= f.label :weight %>
+    <%= f.number_field :weight %>
+    <%= error_tag(@personal_record, :weight) %>
+  </div>
+  <div>
+    <%= f.submit %>
+  </div>
+<% end %>

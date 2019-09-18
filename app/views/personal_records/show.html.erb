@@ -1,0 +1,12 @@
+<table>
+  <h1><%= t '.title' %> </h1>
+  <% @personal_records.each do |personal_record| %>
+    <tr>
+      <td><%= personal_record.date %> - <%= personal_record.weight %> </td>
+      <td><%= button_to t('.destroy'), personal_record_path(personal_record), method: :delete, data: { confirm: t(:confirm_message) } %></td>
+    </tr>
+  <% end %>
+</table>
+
+<%= link_to t('.new'), new_personal_record_path(personal_record: { movement_id: @personal_record.movement_id }) %>
+<%= link_to t('.back'), personal_records_path, method: :get %>

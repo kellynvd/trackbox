@@ -1,0 +1,5 @@
+<% @movements.each do |movement| %>
+    <tr>
+     <td><%= link_to movement.name, new_personal_record_path(personal_record: { movement_id: movement.id }) %></td>
+    </tr>
+<% end %>
