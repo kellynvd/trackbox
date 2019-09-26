@@ -1,12 +1,14 @@
-<%= form_for @movement do |f|  %>
-<%= form_error_tag (@movement) %>
-  <div>
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-    <%= error_tag(@movement, :name) %>
-  </div>
+<div class="form-container">
+  <%= form_for @movement do |f|  %>
+  <%= form_error_tag (@movement) %>
+    <div class="form-group">
+      <%= f.label :name %>
+      <%= f.text_field :name, class: 'form-control' %>
+      <%= error_tag(@movement, :name) %>
+    </div>
 
-  <div>
-    <%= f.submit %>
-  </div>
-<% end %>
+    <div class="form-group">
+      <%= f.submit class: 'btn btn-info btn-block' %>
+    </div>
+  <% end %>
+</div>

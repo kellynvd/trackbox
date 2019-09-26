@@ -17,7 +17,7 @@ module ErrorsHelper
     content_tag(
       :div,
       I18n.t(:form_error),
-      class: 'error-message'
+      class: 'alert alert-danger'
     )
   end
 end

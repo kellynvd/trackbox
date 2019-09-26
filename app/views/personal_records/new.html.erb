@@ -1,3 +1,2 @@
-<h1><%= @personal_record.movement.name %></h1>
+<h3 class="page-header"><%= @personal_record.movement.name %></h3>
 <%= render 'form', personal_record: @personal_record %>
-<%= link_to t('.back'), personal_records_path %>
