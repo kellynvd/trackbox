@@ -3,6 +3,7 @@ AllCops:
   Exclude:
     - db/schema.rb
     - vendor/bundle/**/*
+    - config/initializers/devise.rb
 
 Style/Documentation:
   Enabled: false

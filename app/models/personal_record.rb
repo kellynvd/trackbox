@@ -1,8 +1,9 @@
 # frozen_string_literal: true
 
 class PersonalRecord < ApplicationRecord
-  validates_uniqueness_of :date, scope: :movement_id
+  validates_uniqueness_of :date, scope: %i[user_id movement_id]
   belongs_to :movement
+  belongs_to :user
 
   scope :newest, lambda {
     where(%(

@@ -10,8 +10,16 @@
   </head>
 
   <body>
-  <div class="content-container">
-    <%= yield %>
-  <div>
+    <% if user_signed_in? %>
+      <%= render 'layouts/user_navbar' %>
+    <% end %>
+
+    <% if admin_signed_in? %>
+      <%= render 'layouts/admin_navbar' %>
+    <% end %>
+
+    <div class="content-container">
+      <%= yield %>
+    <div>
   </body>
 </html>

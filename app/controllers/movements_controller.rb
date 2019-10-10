@@ -2,6 +2,7 @@
 
 class MovementsController < ApplicationController
   before_action :current_movement, only: %i[show edit update destroy]
+  before_action :authenticate_admin!
 
   def index
     @movements = Movement.all

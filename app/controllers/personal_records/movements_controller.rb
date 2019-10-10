@@ -2,6 +2,8 @@
 
 module PersonalRecords
   class MovementsController < ApplicationController
+    before_action :authenticate_user!
+
     def index
       @movements = Movement.all
     end
