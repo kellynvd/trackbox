@@ -1,0 +1,13 @@
+<div class="content-container">
+  <h3 class="list-header"><%= t '.title' %> </h3>
+  <div class="list-body">
+  <% @personal_records.each do |personal_record| %>
+    <div class="list-item">
+      <%= personal_record.date %> - <%= personal_record.weight %>
+      <%= button_to t('.destroy'), personal_record_path(personal_record), method: :delete, data: { confirm: t(:confirm_message) }, class: 'btn btn-danger' %>
+    </div>
+  <% end %>
+</div>
+
+<%= link_to t('.new'), new_personal_record_path(personal_record: { movement_id: @personal_record.movement_id }), class: 'btn btn-info' %>
+<%= link_to t('.back'), personal_records_path, method: :get, class: 'btn btn-default' %>

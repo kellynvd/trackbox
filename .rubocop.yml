@@ -1,0 +1,12 @@
+AllCops:
+  TargetRubyVersion: 2.6
+  Exclude:
+    - db/schema.rb
+    - vendor/bundle/**/*
+    - config/initializers/devise.rb
+
+Style/Documentation:
+  Enabled: false
+
+Style/EmptyMethod:
+  EnforcedStyle: expanded

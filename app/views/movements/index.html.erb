@@ -1,0 +1,9 @@
+  <h3 class="list-header"><%= t '.title' %> </h3>
+    <div class="list-body">
+    <% @movements.each do |movement| %>
+      <div class="list-item">
+        <div class="col-md-8 list-item__name"><%= link_to movement.name, movement_path(movement) %></div>
+        </div>
+    <% end %>
+  </div>
+  <%= button_to t('.new'), new_movement_path, method: :get, class: 'btn btn-info'%>
